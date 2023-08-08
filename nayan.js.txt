@@ -1,0 +1,63 @@
+How to create node app ?
+Open VS code :- 
+1. create folder : whatsapp then open with VS code
+2. open terminal 
+3. how to create a node app :- npm init  ----> it create packgae.json file
+4. Enter - amazon
+5. Enter version - 1.0.2
+6. Description - anything
+7. entry point : click enter
+8. test command:                                                         
+9. git repository:                                                       
+10. keywords: (whatever we wants to add files type) like:- js,express
+11. author: creator of this app
+12. license: (ISC)
+
+* [{( Interview Question :_ What is Package.json ?
+=> it describes the info of the project it includes - keywords, author, license, description. )}]
+
+13. Types of Modules :- 3 types
+=> Core - http, OS, FS, util, path, process, urls
+=> Local (private , selfmade)
+=> Third party
+
+* [{ What is Express ?
+Express is a frameWork of the NodeJs }]
+
+========================================================================
+
+let express = require('express')
+let amazon = express ();
+amazon.use (express.json());
+let port = 4000;
+let user = {
+     name: "nayan",
+     age: 26
+}
+
+amazon.get ("/viewemp", (req, res ) => {
+     res.send("Hello");
+}
+
+amazon.post ("/addemp", () => {
+     let data = req.body;
+     console.log(data); 
+     res.send ('post method')
+});
+
+amazon.put ("/updateemp", (req, res ) => {
+     res.send("Put method");
+}
+
+amazon.delete ("/viewemp", () => {
+     res.send ('delete method')
+});
+
+amazon.listen (podt, () => {
+       console.log (`server running on ${port}`)
+
+});
+
+-------
+Nodemon :- 
+It also a third party NPM
